@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades - Virtual Classroom</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grades.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="top-nav">
+            <div class="logo-container">
+                <a href="dashboard.html" class="logo">Virtual Classroom</a>
+                <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+            </div>
+            <div class="header-title">
+                <h2><!-- Page-specific title --></h2>
+            </div>
+            <div class="profile-section">
+                <div class="profile-info">
+                    <span id="username">USER</span>
+                    <span id="user-role">Student</span>
+                </div>
+                <div class="profile-pic">
+                    <!-- <img src="images/profile-placeholder.png" alt="Profile"> -->
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <!-- Same sidebar as dashboard -->
+            </aside>
+
+            <div class="content-area">
+                <h1><i class="fas fa-chart-bar"></i> My Grades</h1>
+                
+                <div class="grade-summary">
+                    <div class="summary-card">
+                        <h3>Overall Average</h3>
+                        <div class="grade-circle" id="overall-grade">
+                            <span>--</span>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Completed Assignments</h3>
+                        <div class="progress-container">
+                            <div class="progress-bar" id="completed-bar"></div>
+                            <span id="completed-text">0/0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grades-table-container">
+                    <table class="grades-table" id="grades-table">
+                        <thead>
+                            <tr>
+                                <th>Course</th>
+                                <th>Assignment</th>
+                                <th>Due Date</th>
+                                <th>Status</th>
+                                <th>Grade</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Grades will be loaded here via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/grades.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Classroom Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Top Navigation Bar -->
+        <header class="top-nav">
+            <div class="logo-container">
+                <div class="logo">Virtual Classroom</div>
+                <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search courses, materials..." id="search-input">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="notification-area">
+                <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </div>
+                <div class="profile-section">
+                    <div class="profile-info">
+                        <span id="username">Loading...</span>
+                        <span id="user-role">Student</span>
+                    </div>
+                    <div class="profile-pic">
+                        <!-- <img src="images/profile-placeholder.png" alt="Profile Picture" id="profile-image"> -->
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Sidebar Navigation -->
+            <aside class="sidebar">
+                <nav>
+                    <ul>
+                        <li class="active"><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                        <li><a href="classroom.html"><i class="fas fa-chalkboard-teacher"></i> Classroom</a></li>
+                        <li><a href="courses.html"><i class="fas fa-book"></i> My Courses</a></li>
+                        <li><a href="assignments.html"><i class="fas fa-tasks"></i> Assignments</a></li>
+                        <li><a href="grades.html"><i class="fas fa-chart-bar"></i> Grades</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Dashboard Content -->
+            <div class="content-area">
+                <!-- Welcome Banner with Date/Time -->
+                <section class="welcome-banner">
+                    <div class="welcome-text">  
+                        <h1>Welcome back, <span id="greeting-name">John Doe</span>!</h1>
+                        <p id="datetime">Loading date and time...</p>
+                    </div>
+                    <div class="welcome-stats">
+                        <div class="stat-card">
+                            <i class="fas fa-book-open"></i>
+                            <div>
+                                <span class="stat-number" id="active-courses">3</span>
+                                <span class="stat-label">Active Courses</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-tasks"></i>
+                            <div>
+                                <span class="stat-number" id="pending-assignments">2</span>
+                                <span class="stat-label">Pending Assignments</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-calendar-check"></i>
+                            <div>
+                                <span class="stat-number" id="upcoming-classes">1</span>
+                                <span class="stat-label">Classes Today</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Upcoming Classes Section -->
+                <section class="upcoming-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-calendar-day"></i> Today's Schedule</h2>
+                        <a href="calendar.html" class="view-all">View All</a>
+                    </div>
+                    <div class="schedule-container" id="today-schedule">
+                        <!-- Dynamic content will be loaded here -->
+                    </div>
+                </section>
+
+                <!-- Courses Overview Section -->
+                <section class="courses-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-book"></i> My Courses</h2>
+                        <a href="courses.html" class="view-all">View All</a>
+                    </div>
+                    <div class="courses-grid" id="courses-grid">
+                        <!-- Dynamic content will be loaded here -->
+                    </div>
+                </section>
+
+                <!-- Recent Announcements Section -->
+                <section class="announcements-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-bullhorn"></i> Recent Announcements</h2>
+                        <a href="announcements.html" class="view-all">View All</a>
+                    </div>
+                    <div class="announcements-list" id="announcements-list">
+                        <!-- Dynamic content will be loaded here -->
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Profile Dropdown Menu (hidden by default) -->
+        <div class="profile-dropdown" id="profile-dropdown">
+            <div class="dropdown-header">
+                <!-- <img src="images/profile-placeholder.png" alt="Profile"> -->
+                <div>
+                    <h4 id="dropdown-username">User Name</h4>
+                    <p id="dropdown-role">Student</p>
+                </div>
+            </div>
+            <ul>
+                <li><a href="profile.html"><i class="fas fa-user"></i> My Profile</a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="#" id="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

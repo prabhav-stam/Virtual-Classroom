@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Courses - Virtual Classroom</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/courses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="top-nav">
+            <div class="logo-container">
+                <a href="dashboard.html" class="logo">Virtual Classroom</a>
+                <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+            </div>
+            <div class="header-title">
+                <h2><!-- Page-specific title --></h2>
+            </div>
+            <div class="profile-section">
+                <div class="profile-info">
+                    <span id="username">John Doe</span>
+                    <span id="user-role">Student</span>
+                </div>
+                <div class="profile-pic">
+                    <!-- <img src="images/profile-placeholder.png" alt="Profile"> -->
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <!-- Same sidebar as dashboard -->
+            </aside>
+
+            <div class="content-area">
+                <h1><i class="fas fa-book"></i> My Courses</h1>
+                
+                <div class="courses-grid" id="courses-container">
+                    <!-- Courses will be loaded here via JavaScript -->
+                </div>
+                
+                <!-- For Teachers/Admins -->
+                <div class="add-course-box" id="add-course-box">
+                    <button id="add-course-btn">
+                        <i class="fas fa-plus"></i> Add New Course
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Course Modal -->
+    <div class="modal" id="course-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Add New Course</h2>
+            <form id="course-form">
+                <div class="form-group">
+                    <label for="course-title">Course Title</label>
+                    <input type="text" id="course-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="course-code">Course Code</label>
+                    <input type="text" id="course-code" required>
+                </div>
+                <div class="form-group">
+                    <label for="course-desc">Description</label>
+                    <textarea id="course-desc" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Course</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/courses.js"></script>
+</body>
+</html> 

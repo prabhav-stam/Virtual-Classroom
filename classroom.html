@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Classroom</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Top Navigation Bar -->
+        <header class="top-nav">
+            <div class="logo-container">
+                <a href="dashboard.html" class="logo">Virtual Classroom</a>
+                <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+            </div>
+            <div class="class-info">
+                <h3>Mathematics 101</h3>
+                <p>With Prof. Smith</p>
+            </div>
+            <div class="notification-area">
+                <a href="dashboard.html" class="back-to-dashboard">
+                    <i class="fas fa-home"></i> Dashboard
+                </a>
+                <div class="profile-section">
+                    <div class="profile-info">
+                        <span id="username">Loading...</span>
+                    </div>
+                    <div class="profile-pic">
+                        <!-- <img src="images/profile-placeholder.png" alt="Profile Picture" id="profile-image"> -->
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Classroom Content -->
+        <div class="classroom-content">
+            <!-- Video Feed Section -->
+            <div class="video-section">
+                <div class="main-video">
+                    <div class="video-placeholder">
+                        <i class="fas fa-user-tie"></i>
+                        <p>Professor's Camera</p>
+                    </div>
+                </div>
+                <div class="video-controls">
+                    <button class="control-btn mic-control">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    <button class="control-btn video-control">
+                        <i class="fas fa-video"></i>
+                    </button>
+                    <button class="control-btn screen-share">
+                        <i class="fas fa-desktop"></i>
+                    </button>
+                    <button class="control-btn leave-class">
+                        <i class="fas fa-sign-out-alt"></i> Leave
+                    </button>
+                </div>
+            </div>
+
+            <!-- Classroom Sidebar -->
+            <div class="classroom-sidebar">
+                <div class="sidebar-tabs">
+                    <button class="tab-btn active" data-tab="chat"><i class="fas fa-comments"></i> Chat</button>
+                    <button class="tab-btn" data-tab="participants"><i class="fas fa-users"></i> Participants</button>
+                    <button class="tab-btn" data-tab="whiteboard"><i class="fas fa-chalkboard"></i> Whiteboard</button>
+                </div>
+
+                <div class="tab-content active" id="chat-tab">
+                    <div class="chat-messages" id="chat-messages">
+                        <!-- Messages will appear here -->
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" placeholder="Type your message..." id="message-input">
+                        <button id="send-message"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="participants-tab">
+                    <div class="participants-list">
+                        <!-- Participants will appear here -->
+                    </div>
+                </div>
+
+                <div class="tab-content" id="whiteboard-tab">
+                    <canvas id="whiteboard" width="400" height="500"></canvas>
+                    <div class="whiteboard-tools">
+                        <input type="color" id="draw-color" value="#000000">
+                        <input type="range" id="draw-width" min="1" max="20" value="3">
+                        <button id="clear-whiteboard"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/classroom.js"></script>
+</body>
+</html>
